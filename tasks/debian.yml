@@ -5,6 +5,16 @@
     state: "present"
   with_items: '{{ observium_debian_pre_reqs }}'
 
+
+- name: debian | Installing Debian Commercial Pre-Req Packages
+  apt:
+    name: "{{ item }}"
+    state: "present"
+  with_items: '{{ observium_debian_subscription_packages }}'
+  when: observium_commercial
+
+
+
 - name: debian | Installing LibVirt Packages to monitor (If Desired)
   apt:
     name: "{{ libvirt-bin }}"

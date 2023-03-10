@@ -77,6 +77,11 @@ observium_debian_pre_reqs:
   - whois
   - snmp-mibs-downloader
 
+observium_debian_subscription_packages:
+  - monitoring-plugins-basic
+  - monitoring-plugins-common
+  - monitoring-plugins-standard
+
 observium_dl_dir: "/var/www/{{ observium_domain }}"
 observium_dl_package: 'observium-community-latest.tar.gz'
 observium_dl_url: 'http://www.observium.org'
