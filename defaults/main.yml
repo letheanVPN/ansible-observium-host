@@ -77,7 +77,7 @@ observium_debian_pre_reqs:
   - whois
   - snmp-mibs-downloader
 
-observium_dl_dir: '/opt'
+observium_dl_dir: "/var/www/{{ observium_domain }}"
 observium_dl_package: 'observium-community-latest.tar.gz'
 observium_dl_url: 'http://www.observium.org'
 observium_monitor_libvirt_vms: false  #Define if desired to monitor LibVirt VM's
