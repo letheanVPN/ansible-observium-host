@@ -76,6 +76,7 @@ observium_debian_pre_reqs:
   - subversion
   - whois
   - snmp-mibs-downloader
+  - python-is-python3
 
 observium_debian_subscription_packages:
   - monitoring-plugins-basic
