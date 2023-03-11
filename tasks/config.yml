@@ -46,4 +46,3 @@
     path: "/root/.observium_db_populated"
     state: "touch"
   when: observium_db_populated.changed
-

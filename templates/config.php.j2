@@ -12,6 +12,7 @@ $config['db_name']      = '{{ observium_db_info.db }}';
 // Base directory
 #$config['install_dir'] = "{{ observium_base_dir }}";
 
+
 // Default community list to use when adding/discovering
 $config['snmp']['community'] = array({{ observium_snmp_community_list | join(',') }});
 
@@ -20,6 +21,9 @@ $config['auth_mechanism'] = "mysql";    // default, other options: ldap, http-au
 
 // Enable alerter (not available in CE)
 // $config['poller-wrapper']['alerter'] = TRUE;
+{% if observium_commercial %}
+    $config['poller-wrapper']['alerter'] = TRUE;
+{% endif %}
 
 // Set up a default alerter (email to a single address)
 $config['email']['default']        = "{{ observium_admin_account_info.email_to | default('root@localhost') }}";
