@@ -25,6 +25,11 @@ $config['auth_mechanism'] = "mysql";    // default, other options: ldap, http-au
     $config['poller-wrapper']['alerter'] = TRUE;
 {% endif %}
 
+{% if observium_config_geo_api != false %}
+    $config['geocoding']['enable'] = TRUE;                      // Enable Geocoding
+    $config['geocoding']['api'] = '{{ observium_config_geo_api }}';
+{% endif %}
+
 $config['poller_modules']['unix-agent'] = 1;
 
 // Set up a default alerter (email to a single address)

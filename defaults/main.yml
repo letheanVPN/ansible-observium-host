@@ -95,3 +95,5 @@ observium_commercial: false                                                     
 observium_commercial_svn_user: ""                                                               # SVN user for commercial version
 observium_commercial_svn_password: ""                                                           # SVN password for commercial version
 observium_commercial_svn_repo: "http://svn.observium.org/svn/observium/branches/stable"         # Repo to pull commercial version from
+
+observium_config_geo_api: false
